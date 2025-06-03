@@ -1,14 +1,9 @@
-const mitgliedId3 = new ObjectId("665bfa4e7e4a4a5f3bcbf005");
-const songId1 = new ObjectId("665bfa4e7e4a4a5f3bcbf008");
-const songId3 = new ObjectId("665bfa4e7e4a4a5f3bcbf00a");
+const mitgliedId1ToDelete = new ObjectId("683ec75bd71f24dcd7c59f37");
+const songId1ToDelete = new ObjectId("683ec75cd71f24dcd7c59f3c");
+const songId2ToDelete = new ObjectId("683ec75cd71f24dcd7c59f3d");
 
-
-db.Mitglied.deleteOne({ _id: mitgliedId3 });
-
+db.Mitglied.deleteOne({ _id: mitgliedId1ToDelete });
 
 db.Songs.deleteMany({
-  $or: [
-    { _id: songId1 },
-    { _id: songId3 }
-  ]
+  $or: [{ _id: songId1ToDelete }, { _id: songId2ToDelete }],
 });
