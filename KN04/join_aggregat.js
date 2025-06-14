@@ -1,112 +1,48 @@
-print("--- Start der MongoDB Aggregationen ---");
-
-print("\n1. Songs mit langer Dauer und 'remix' Status (ersetzt find() mit UND-Verknüpfung):");
-(
-  db.Songs.aggregate([
-    { $match: { dauer: { $gt: 240 } } },
-    { $match: { remix: true } }
-  ])
-  .forEach(printjson)
-);
-
-print("\n2. Mitglieder Übersicht mit Filter, Projektion und Sortierung:");
-(
-  db.Mitglied.aggregate([
-    {
-      $match: {
-        geburtjahr: { $lt: 2000 },
-        aktiv: true
-      }
-    },
-    {
-      $project: {
-        _id: 0,
-        nameDesMitglieds: "$name",
-        instrument: 1,
-        alterAktuell: { $subtract: [new Date().getFullYear(), "$geburtjahr"] }
-      }
-    },
-    {
-      $sort: {
-        alterAktuell: 1
-      }
+print("\n1. Alben mit den enthaltenen Songs:");
+db.Album.aggregate([
+  {
+    $lookup: {
+      from: "Songs",
+      localField: "_id",
+      foreignField: "albumId",
+      as: "songs"
     }
-  ])
-  .forEach(printjson)
-);
-
-print("\n3. Gesamtstatistiken über alle Songs (mit $sum):");
-(
-  db.Songs.aggregate([
-    {
-      $group: {
-        _id: null,
-        gesamtAnzahlSongs: { $sum: 1 },
-        gesamtDauerSekunden: { $sum: "$dauer" }
-      }
+  },
+  {
+    $project: {
+      _id: 0,
+      title: 1,
+      released: 1,
+      "songs.title": 1,
+      "songs.dauer": 1
     }
-  ])
-  .forEach(printjson)
-);
+  }
+]).forEach(printjson);
 
-print("\n4. Song-Kategorie-Statistiken nach 'bewertet' Status (mit $group):");
-(
-  db.Songs.aggregate([
-    {
-      $group: {
-        _id: "$bewertet",
-        anzahlSongsInKategorie: { $sum: 1 },
-        durchschnittlicheDauerKategorie: { $avg: "$dauer" },
-        songsDetails: { $push: { titel: "$title", dauer: "$dauer" } }
-      }
-    },
-    {
-      $sort: {
-        _id: 1
-      }
+
+print("\n2. Alben mit durchschnittlicher Songdauer (nur Alben mit Songs):");
+db.Album.aggregate([
+  {
+    $lookup: {
+      from: "Songs",
+      localField: "_id",
+      foreignField: "albumId",
+      as: "songs"
     }
-  ])
-  .forEach(printjson)
-);
-
-print("\n5. Durchschnittliche Album-Statistiken pro Genre (mit $lookup und Aggregation):");
-(
-  db.Album.aggregate([
-    {
-      $lookup: {
-        from: "Genre",
-        localField: "genreId",
-        foreignField: "_id",
-        as: "genreInfo"
-      }
-    },
-    {
-      $unwind: "$genreInfo"
-    },
-    {
-      $group: {
-        _id: "$genreInfo.name",
-        anzahlAlben: { $sum: 1 },
-        durchschnittlichesJahr: { $avg: "$jahr" },
-        gesamteBonusTracks: { $sum: "$bonusTracks" }
-      }
-    },
-    {
-      $project: {
-        _id: 0,
-        genre: "$_id",
-        albenAnzahl: "$anzahlAlben",
-        avgJahr: { $round: ["$durchschnittlichesJahr", 0] },
-        totalBonusTracks: "$gesamteBonusTracks"
-      }
-    },
-    {
-      $sort: {
-        albenAnzahl: -1
-      }
+  },
+  {
+    $match: {
+      "songs.0": { $exists: true }
     }
-  ])
-  .forEach(printjson)
-);
-
-print("\n--- Ende der MongoDB Aggregationen ---");
+  },
+  {
+    $project: {
+      title: 1,
+      released: 1,
+      durchschnitt: { $avg: "$songs.dauer" }
+    }
+  },
+  {
+    $sort: { durchschnitt: -1 }
+  }
+]).forEach(printjson);
