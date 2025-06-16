@@ -1,0 +1,76 @@
+
+// Knoten erstellen
+CREATE
+    (b1:Band {bandId: 1, name: 'Leona', gruendungsjahr: 2000}),
+    (b2:Band {bandId: 2, name: 'Naima', gruendungsjahr: 2010}),
+    (b3:Band {bandId: 3, name: 'Echoes', gruendungsjahr: 2005}),
+    (b4:Band {bandId: 4, name: 'Aurora', gruendungsjahr: 2018}),
+    (b5:Band {bandId: 5, name: 'Thunderbirds', gruendungsjahr: 1995}),
+
+    (m1:Mitglied {mitgliedId: 101, name: 'Leo', instrument: 'Gitarre', eintrittsjahr: 2000}),
+    (m2:Mitglied {mitgliedId: 102, name: 'Luca', instrument: 'Gesang', eintrittsjahr: 2000}),
+    (m3:Mitglied {mitgliedId: 103, name: 'Naimo', instrument: 'Bass', eintrittsjahr: 2010}),
+    (m4:Mitglied {mitgliedId: 104, name: 'Clara', instrument: 'Schlagzeug', eintrittsjahr: 2005}),
+    (m5:Mitglied {mitgliedId: 105, name: 'David', instrument: 'Keyboard', eintrittsjahr: 2005}),
+    (m6:Mitglied {mitgliedId: 106, name: 'Sophie', instrument: 'Gitarre', eintrittsjahr: 2018}),
+    (m7:Mitglied {mitgliedId: 107, name: 'Max', instrument: 'Gesang', eintrittsjahr: 1995}),
+    (m8:Mitglied {mitgliedId: 108, name: 'Lena', instrument: 'Bass', eintrittsjahr: 1995}),
+
+    (a1:Album {albumId: 201, titel: 'World', erscheinungsjahr: 2005}),
+    (a2:Album {albumId: 202, titel: 'Europa', erscheinungsjahr: 2015}),
+    (a3:Album {albumId: 203, titel: 'Whispers', erscheinungsjahr: 2008}),
+    (a4:Album {albumId: 204, titel: 'Starlight', erscheinungsjahr: 2020}),
+    (a5:Album {albumId: 205, titel: 'Vintage Vibes', erscheinungsjahr: 1998}),
+
+    (s1:Song {songId: 301, name: 'Hi', dauer: 240, erscheinungsdatum: date('2005-03-10')}),
+    (s2:Song {songId: 302, name: 'No Thanks', dauer: 180, erscheinungsdatum: date('2005-03-10')}),
+    (s3:Song {songId: 303, name: 'What about you', dauer: 300, erscheinungsdatum: date('2015-07-20')}),
+    (s4:Song {songId: 304, name: 'Silent Dawn', dauer: 280, erscheinungsdatum: date('2008-05-22')}),
+    (s5:Song {songId: 305, name: 'Cosmic Dust', dauer: 320, erscheinungsdatum: date('2020-02-14')}),
+    (s6:Song {songId: 306, name: 'Retro Groove', dauer: 210, erscheinungsdatum: date('1998-11-01')}),
+    (s7:Song {songId: 307, name: 'Echoing Trails', dauer: 270, erscheinungsdatum: date('2008-05-22')}),
+    (s8:Song {songId: 308, name: 'Northern Lights', dauer: 310, erscheinungsdatum: date('2020-02-14')}),
+
+    
+    (g1:Genre {genreId: 401, name: 'Rock'}),
+    (g2:Genre {genreId: 402, name: 'Pop'}),
+    (g3:Genre {genreId: 403, name: 'Jazz'}),
+    (g4:Genre {genreId: 404, name: 'Indie'}),
+    (g5:Genre {genreId: 405, name: 'Blues'}),
+
+    // Kanten erstellen
+
+    (b1)-[:HAT_MITGLIED]->(m1),
+    (b1)-[:HAT_MITGLIED]->(m2),
+    (b3)-[:HAT_MITGLIED]->(m4),
+    (b3)-[:HAT_MITGLIED]->(m5),
+    (b2)-[:HAT_MITGLIED]->(m3),
+    (b4)-[:HAT_MITGLIED]->(m6),
+    (b5)-[:HAT_MITGLIED]->(m7),
+    (b5)-[:HAT_MITGLIED]->(m8),
+
+    (b1)-[:VEROEFFENTLICHT_ALBUM]->(a1),
+    (b2)-[:VEROEFFENTLICHT_ALBUM]->(a2),
+    (b3)-[:VEROEFFENTLICHT_ALBUM]->(a3),
+    (b4)-[:VEROEFFENTLICHT_ALBUM]->(a4),
+    (b5)-[:VEROEFFENTLICHT_ALBUM]->(a5),
+
+    (a1)-[:ENTHAELT_SONG]->(s1),
+    (a1)-[:ENTHAELT_SONG]->(s2),
+    (a3)-[:ENTHAELT_SONG]->(s4),
+    (a3)-[:ENTHAELT_SONG]->(s7),
+    (a2)-[:ENTHAELT_SONG]->(s3),
+    (a4)-[:ENTHAELT_SONG]->(s5),
+    (a4)-[:ENTHAELT_SONG]->(s8),
+    (a5)-[:ENTHAELT_SONG]->(s6),
+
+    (b1)-[:IST_IM_GENRE {seit: date('2000-01-01')}]->(g1), // Leona - Rock
+    (b1)-[:IST_IM_GENRE {seit: date('2005-06-15')}]->(g2), // Leona - Pop
+    (b2)-[:IST_IM_GENRE {seit: date('2010-01-01')}]->(g1), // Naima - Rock
+    (b2)-[:IST_IM_GENRE {seit: date('2012-03-01')}]->(g3), // Naima - Jazz
+    (b3)-[:IST_IM_GENRE {seit: date('2005-01-01')}]->(g4), // Echoes - Indie
+    (b3)-[:IST_IM_GENRE {seit: date('2008-01-01')}]->(g1), // Echoes - Rock
+    (b4)-[:IST_IM_GENRE {seit: date('2018-01-01')}]->(g2), // Aurora - Pop
+    (b5)-[:IST_IM_GENRE {seit: date('1995-01-01')}]->(g5), // Thunderbirds - Blues
+    (b5)-[:IST_IM_GENRE {seit: date('2000-01-01')}]->(g1)  // Thunderbirds - Rock
+;
