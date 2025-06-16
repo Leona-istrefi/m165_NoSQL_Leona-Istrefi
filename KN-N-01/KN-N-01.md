@@ -13,27 +13,28 @@
 
 ## Erklärung zu den Attributen
 ```Band(Leona, Naima) ```
-bandId-> Int
-Name -> String 
-Gruendungsjahr -> Int 
+* `bandId`: Int
+* `Name`: String
+* `Gruendungsjahr`: Int
 
 ```Mitglied ``` 
-mitgliedId -> Int 
-name -> String 
-Instrument -> String 
-eintrittsjahr -> String 
+* `mitgliedId`: Int
+* `Name`: String
+* `Instrument`: String
+* `Eintrittsjahr`: Int
 
 ```Album``` 
-albumId -> Int
-titel -> String 
-erscheinungsjahr -> Int 
+* `albumId`: Int
+* `Titel`: String
+* `Erscheinungsjahr`: Int
 
 ```Song``` 
-songId -> int 
-name -> String 
-dauer -> int 
-erscheinungsdatum -> Date
+* `songId`: Int
+* `Name`: String
+* `Dauer`: Int
+* `Erscheinungsdatum`: Date
+
 
 ```Genre```
-genreId -> int 
-name -> name
+* `genreId`: Int
+* `Name`: String
