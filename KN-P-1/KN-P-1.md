@@ -5,13 +5,14 @@
 ![image](https://github.com/user-attachments/assets/4e396788-f505-4fa1-b3ee-8845c2d72077)
 
 ```http://52.0.105.50:9090``` 
-![image](https://github.com/user-attachments/assets/87fabf0e-599c-4bb4-811f-e7bcef76c3ce)
+![image-1](https://github.com/user-attachments/assets/21e86cbb-133e-41f5-a169-42d44e5510f5)
 
 ```http://52.0.105.50:3000```
-![image](https://github.com/user-attachments/assets/a8eb1f38-c549-4093-b40c-5065cdb0f0cd)
+![image-2](https://github.com/user-attachments/assets/d31519ba-64dc-4654-8ca6-777b19ae1cd8)
 
 ```http://52.0.105.50:3000/metrics``` 
-![image](https://github.com/user-attachments/assets/56e54a3e-80bb-4156-8002-d1e0f1ae0325)
+![image-3](https://github.com/user-attachments/assets/3e8c7897-47f3-4245-b9b2-0b2d63ea4b63)
+
 
 # B 
 
