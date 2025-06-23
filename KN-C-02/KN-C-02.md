@@ -29,4 +29,4 @@
 * Aufgrund von Änderungen oder Korrekturen müssen die Dauer und das Erscheinungsdatum für mehrere Songs auf einem bestimmten Album aktualisiert werden. Die Herausforderung hierbei ist, dass wir die Songs nicht direkt über ihre ID's kennne, sonder sie über das Album (album_id) und/oder den Songtitel (song_name) identifizieren müssen.
 
 ## Screenshot 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/91599023-7aca-4f7e-8464-fb8aaeda5597)
