@@ -12,7 +12,7 @@
 ## Screenshot 
 
 ```Teil der Daten löschen```
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/37e108d5-c2db-4719-bc74-ea9a114d4be0)
 
 ```Alles löschen``` 
 ![alt text](image-6.png)
