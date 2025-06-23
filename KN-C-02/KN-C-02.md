@@ -6,7 +6,7 @@
 
 # B 
 ## Screenshot 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/05716572-d66f-4921-bcea-226d9adfd129)
 
 # C 
 ## Screenshot 
