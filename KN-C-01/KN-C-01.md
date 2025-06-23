@@ -23,7 +23,7 @@
 ![image](https://github.com/user-attachments/assets/819292c1-2617-4659-9bcd-486c5ab7731b)
 
 ```Album_mit_Songs```
-![image](https://github.com/user-attachments/assets/51e4c00d-69bc-4a2d-a855-2cd2ec6304d9)
+![image](https://github.com/user-attachments/assets/785b3337-2b8f-4b0f-b20d-0cae1b0b0fd8)
 
 ```Band_with_Genre```
 ![image](https://github.com/user-attachments/assets/093b7a47-475c-4bad-89d8-54e5b6126295)
