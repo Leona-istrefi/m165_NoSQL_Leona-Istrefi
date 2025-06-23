@@ -1,7 +1,7 @@
 # A 
 ## Screenshot 
 ![image](https://github.com/user-attachments/assets/3c3dd38a-a5ea-417c-9273-7b3ee6259334)
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/68cc157a-2d8f-4a32-9c1e-6d888499d2c1)
 ![alt text](image-1.png)
 
 # B 
