@@ -1,0 +1,13 @@
+USE band;
+
+SELECT * FROM band_by_member WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d;
+
+SELECT * FROM band_by_member WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d AND mitglied_id = 01234567-89ab-cdef-0123-456789abcdef;
+
+SELECT * FROM album_by_song WHERE album_id = 11223344-5566-7788-99aa-bbccddeeff00;
+
+SELECT * FROM album_by_song WHERE album_id = 11223344-5566-7788-99aa-bbccddeeff00 AND song_id = 00112233-4455-6677-8899-aabbccddeeff;
+
+SELECT * FROM band_by_genre WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d;
+
+SELECT * FROM band_by_genre WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d AND genre_id = a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6e;

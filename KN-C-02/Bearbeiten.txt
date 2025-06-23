@@ -1,0 +1,25 @@
+USE band;
+
+UPDATE band_by_member
+SET band_name = 'The New Sound Collective'
+WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d AND mitglied_id IN (01234567-89ab-cdef-0123-456789abcdef, 01234567-89ab-cdef-0123-456789abcde0, 01234567-89ab-cdef-0123-456789abcde1, 01234567-89ab-cdef-0123-456789abcde2);
+
+UPDATE band_by_genre
+SET band_name = 'The New Sound Collective'
+WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d AND genre_id IN (a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d, a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6e, a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6f);
+
+
+UPDATE band_by_member
+SET mitglied_instrument = 'Keyboard', mitglied_eintrittsjahr = '2010'
+WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d AND mitglied_id = 01234567-89ab-cdef-0123-456789abcdef;
+
+
+
+UPDATE album_by_song
+SET song_dauer = '05:25', song_erscheinungsdatum = '1959-08-17'
+WHERE album_id = 99887766-5544-3322-1100-fedcba987654 AND song_id = 00112233-4455-6677-8899-aabbccddeef3;
+
+
+UPDATE album_by_song
+SET song_dauer = '09:25', song_erscheinungsdatum = '1959-08-17'
+WHERE album_id = 99887766-5544-3322-1100-fedcba987654 AND song_id = 00112233-4455-6677-8899-aabbccddeef4;

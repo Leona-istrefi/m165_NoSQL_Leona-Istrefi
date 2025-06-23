@@ -1,0 +1,7 @@
+USE band;
+
+DELETE FROM band_by_member
+WHERE band_id = 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d AND mitglied_id = 01234567-89ab-cdef-0123-456789abcde2;
+
+DELETE song_erscheinungsdatum FROM album_by_song
+WHERE album_id = 99887766-5544-3322-1100-fedcba987654 AND song_id = 00112233-4455-6677-8899-aabbccddeef5;

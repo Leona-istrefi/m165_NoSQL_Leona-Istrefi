@@ -1,0 +1,6 @@
+USE band;
+TRUNCATE TABLE band_by_member;
+
+TRUNCATE TABLE album_by_song;
+
+TRUNCATE TABLE band_by_genre;

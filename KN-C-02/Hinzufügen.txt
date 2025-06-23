@@ -1,0 +1,32 @@
+
+USE band;
+
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', 01234567-89ab-cdef-0123-456789abcdef, 'Max Mustermann', 'Gitarre', '2005');
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', 01234567-89ab-cdef-0123-456789abcde0, 'Lisa Mueller', 'Gesang', '2005');
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', 01234567-89ab-cdef-0123-456789abcde1, 'Tom Schmidt', 'Schlagzeug', '2006');
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', 01234567-89ab-cdef-0123-456789abcde2, 'Anna Keller', 'Bass', '2007');
+
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d, 'Jazz Fusion', '2010', 01234567-89ab-cdef-0123-456789abcde3, 'Peter Meier', 'Saxophon', '2010');
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d, 'Jazz Fusion', '2010', 01234567-89ab-cdef-0123-456789abcde4, 'Sarah Huber', 'Klavier', '2011');
+INSERT INTO band_by_member (band_id, band_name, band_gruendungsjahr, mitglied_id, mitglied_name, mitglied_instrument, mitglied_eintrittsjahr) VALUES (2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d, 'Jazz Fusion', '2010', 01234567-89ab-cdef-0123-456789abcde5, 'Daniel Graf', 'Kontrabass', '2010');
+
+
+
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (11223344-5566-7788-99aa-bbccddeeff00, 'Rock Anthems', '2015', 00112233-4455-6677-8899-aabbccddeeff, 'Stairway to Heaven', '08:02', '1971');
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (11223344-5566-7788-99aa-bbccddeeff00, 'Rock Anthems', '2015', 00112233-4455-6677-8899-aabbccddeef0, 'Bohemian Rhapsody', '05:55', '1975');
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (11223344-5566-7788-99aa-bbccddeeff00, 'Rock Anthems', '2015', 00112233-4455-6677-8899-aabbccddeef1, 'Hotel California', '06:30', '1976');
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (11223344-5566-7788-99aa-bbccddeeff00, 'Rock Anthems', '2015', 00112233-4455-6677-8899-aabbccddeef2, 'Smells Like Teen Spirit', '05:01', '1991');
+
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (99887766-5544-3322-1100-fedcba987654, 'Jazz Classics', '2020', 00112233-4455-6677-8899-aabbccddeef3, 'Take Five', '05:24', '1959');
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (99887766-5544-3322-1100-fedcba987654, 'Jazz Classics', '2020', 00112233-4455-6677-8899-aabbccddeef4, 'So What', '09:22', '1959');
+INSERT INTO album_by_song (album_id, album_titel, album_erscheinungsjahr, song_id, song_name, song_dauer, song_erscheinungsdatum) VALUES (99887766-5544-3322-1100-fedcba987654, 'Jazz Classics', '2020', 00112233-4455-6677-8899-aabbccddeef5, 'My Favorite Things', '13:41', '1961');
+
+
+
+INSERT INTO band_by_genre (band_id, band_name, band_gruendungsjahr, genre_id, genre_name) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d, 'Rock');
+INSERT INTO band_by_genre (band_id, band_name, band_gruendungsjahr, genre_id, genre_name) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6e, 'Hard Rock');
+INSERT INTO band_by_genre (band_id, band_name, band_gruendungsjahr, genre_id, genre_name) VALUES (1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d, 'The Rockers', '2005', a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6f, 'Classic Rock');
+
+INSERT INTO band_by_genre (band_id, band_name, band_gruendungsjahr, genre_id, genre_name) VALUES (2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d, 'Jazz Fusion', '2010', b1c2d3e4-f5a6-7b8c-9d0e-1f2a3b4c5d6e, 'Jazz');
+INSERT INTO band_by_genre (band_id, band_name, band_gruendungsjahr, genre_id, genre_name) VALUES (2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d, 'Jazz Fusion', '2010', b1c2d3e4-f5a6-7b8c-9d0e-1f2a3b4c5d6f, 'Fusion');
+INSERT INTO band_by_genre (band_id, band_name, band_gruendungsjahr, genre_id, genre_name) VALUES (2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d, 'Jazz Fusion', '2010', b1c2d3e4-f5a6-7b8c-9d0e-1f2a3b4c5d70, 'Smooth Jazz');
