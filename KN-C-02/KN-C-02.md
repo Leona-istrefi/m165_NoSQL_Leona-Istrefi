@@ -2,7 +2,7 @@
 ## Screenshot 
 ![image](https://github.com/user-attachments/assets/3c3dd38a-a5ea-417c-9273-7b3ee6259334)
 ![image](https://github.com/user-attachments/assets/68cc157a-2d8f-4a32-9c1e-6d888499d2c1)
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/e6de341d-f9f0-4a4b-98b1-6c7e715f8e1e)
 
 # B 
 ## Screenshot 
